@@ -1,0 +1,6 @@
+method,chem,matsci,phys
+direct,0.3,0.06,0.13
+cot,0.4,0.26,0.23
+selfcons,,,0.22
+pot,,,0.29
+adaptive,,,0.24

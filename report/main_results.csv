@@ -1,0 +1,10 @@
+dataset,subject,model,method,acc,n,extract_fail,avg_tokens
+matscibench,matsci,qwen-plus,cot,0.26,100,2,674.76
+matscibench,matsci,qwen-plus,direct,0.06,100,8,255.41
+scibench,chem,qwen-plus,cot,0.4,100,0,718.09
+scibench,chem,qwen-plus,direct,0.3,100,1,224.76
+scibench,phys,qwen-plus,pot,0.29,100,1,3194.39
+scibench,phys,qwen-plus,adaptive,0.24,100,0,1413.87
+scibench,phys,qwen-plus,cot,0.23,100,2,1128.67
+scibench,phys,qwen-plus,selfcons,0.22,100,1,5843.09
+scibench,phys,qwen-plus,direct,0.13,100,1,188.87

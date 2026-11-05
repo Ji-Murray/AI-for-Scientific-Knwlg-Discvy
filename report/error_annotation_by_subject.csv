@@ -1,0 +1,9 @@
+subject,error_type,count
+chem,a_knowledge,1
+chem,b_calculation,8
+chem,d_format_extract,1
+matsci,a_knowledge,3
+matsci,b_calculation,5
+phys,a_knowledge,6
+phys,b_calculation,15
+phys,c_comprehension,1
