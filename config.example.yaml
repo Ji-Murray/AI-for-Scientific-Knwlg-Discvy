@@ -1,0 +1,33 @@
+# 实验配置模板。复制为 config.yaml 后填写。
+# 注意：config.yaml 含 API key，已在 .gitignore 中忽略，不要提交。
+
+model: qwen-plus                         # 基座 LLM；全实验必须用同一个模型
+api_base: https://dashscope.aliyuncs.com/compatible-mode/v1
+api_key_env: DASHSCOPE_API_KEY            # 从环境变量读 key，不写进文件
+temperature: 0.0            # Direct/CoT 用 0 保证可复现；self-consistency 会单独覆盖
+max_tokens: 8192
+enable_thinking: false       # 百炼千问：关闭内部思考，避免答案前耗尽输出长度
+seed: 42
+
+# 各方法开关与参数
+methods:
+  direct: {}
+  cot: {}
+  selfcons:
+    k: 5                    # 采样次数
+    temperature: 0.7
+  pot:
+    temperature: 0.0
+  adaptive:
+    rules: heuristic       # heuristic | learned
+
+eval:
+  datasets:
+    - name: scibench
+      subsets: [phys, chem]    # 每个子集各评 100 题
+      n_per_subset: 100
+    - name: matscibench
+      subsets: [all]
+      n_per_subset: 100
+  numeric_tol: 1.0e-4       # 相对误差容差
+  max_workers: 4            # 并发请求数，注意限速

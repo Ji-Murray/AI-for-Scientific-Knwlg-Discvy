@@ -1,0 +1,7 @@
+config.yaml
+results/
+report/
+data/
+__pycache__/
+*.pyc
+.DS_Store
